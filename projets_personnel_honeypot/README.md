@@ -130,3 +130,31 @@ Elle contient des données fictives censées sembler confidentielles.
 Utilisée pour piéger les attaquants à la recherche d’APIs ou d’identifiants.
 
 ![Config.php](../simulation_web-config.PNG)
+
+
+---
+
+## 💻 Scripts & fichiers du projet
+
+### 🧩 `app.py`
+Serveur Flask utilisé en production, déployé sur le VPS. Il simule des pages vulnérables (`/admin`, `/config`, etc.) et enregistre toutes les requêtes dans `honeypot.db`.
+
+### 📊 `app_local.py`
+Version locale permettant à l’administrateur de visualiser les statistiques des attaques à travers `visualisation.html` et `details.html`. Utilise `matplotlib`, `numpy`, `geoip2`...
+
+### 🖥️ `visualisation.html` et `details.html`
+Pages d’administration accessibles uniquement en local.  
+- `visualisation.html` : affiche des graphiques statistiques générés à partir des logs  
+- `details.html` : tableau dynamique des logs bruts
+
+### 🎭 Exemples de templates piégés
+- `admin.html` : fausse page de connexion
+- `config.html` : fichier de configuration fictif
+- `logs.html` : faux journaux d’activité
+
+
+
+
+
+
+
