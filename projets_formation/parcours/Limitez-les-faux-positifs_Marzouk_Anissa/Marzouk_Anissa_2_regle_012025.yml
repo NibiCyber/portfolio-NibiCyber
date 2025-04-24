@@ -1,0 +1,17 @@
+title: Brute Force Detection with Exclusions
+id: 12345-abcd-67890
+description: Detects brute force attempts while excluding known non-malicious accounts.
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+    TargetUserName|contains: ["svc_test", "blocked"]
+  condition: selection and count(15)
+fields:
+  - TargetUserName
+  - TargetDomainName
+  - LogonType
+status: experimental
+level: medium
