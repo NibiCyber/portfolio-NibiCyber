@@ -29,7 +29,7 @@ Tous les événements sont enregistrés dans une base de données, puis visualis
 ### 🧠 Résumé d’activité généré dynamiquement  
 Cette section présente une synthèse automatique des attaques enregistrées : volume global, types d’attaques, pays d’origine, endpoints ciblés, IPs les plus actives, et ports scannés. En bas, un graphique en camembert met en évidence les pays les plus impliqués.
 
-![Synthèse IA + camembert pays](projets_personnel_honeypot/visualisation_synthese-IA_camembert-pays.PNG)
+![Synthèse IA + camembert pays](visualisation_synthese-IA_camembert-pays.PNG)
 
 ---
 
