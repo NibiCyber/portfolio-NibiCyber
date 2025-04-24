@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Visualisation des attaques</title>
+    <style>
+      body {
+        font-family: Arial;
+        text-align: center;
+        padding: 20px;
+      }
+
+      img {
+        max-width: 90%;
+        height: auto;
+        margin: 20px 0;
+      }
+
+      .btn-details {
+        display: inline-block;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+      }
+
+      .btn-details:hover {
+        background-color: #45a049;
+      }
+
+      .summary-box {
+        background-color: #f9f9f9;
+        border-left: 5px solid #2196f3;
+        padding: 20px;
+        margin: 40px auto 60px;
+        width: 95%;
+        max-width: 900px;
+      }
+
+      .summary-box p {
+        margin: 5px 0;
+      }
+
+      /* ✅ Mise en surbrillance des valeurs */
+      .summary-box .highlight {
+        color: #2c7be5;
+        font-weight: bold;
+      }
+
+      h2 {
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/details" class="btn-details">
+      🔍 Voir les détails complets des attaques
+    </a>
+
+    <h1>📊 Statistiques du Honeypot</h1>
+
+    <!-- 🔍 Résumé dynamique -->
+    <h2>📋 Résumé des attaques</h2>
+    <div class="summary-box">
+      <!-- Encadré contenant le résumé -->
+      {% for line in summary.split("||") %}
+      <!-- Boucle Jinja2 : sépare le texte par "||" -->
+      <p>{{ line | safe }}</p>
+      <!-- Affiche chaque ligne avec du HTML interprété -->
+      {% endfor %}
+    </div>
+
+    <h2>🌍 Pays les plus fréquents</h2>
+    <img src="/static/pays.png" alt="Graphique des pays" />
+
+    <h2>🔁 Pages visitées</h2>
+    <img
+      src="/static/endpoints_ameliore_v2.png"
+      alt="Graphique des endpoints"
+    />
+
+    <h2>🏢 ASN les plus fréquents</h2>
+    <img src="/static/top_asn.png" alt="Graphique des ASN les plus fréquents" />
+
+    <h2>📈 IPs les plus insistantes</h2>
+    <img src="/static/top_ips.png" alt="Top IPs" />
+
+    <h2>💥 Types d'attaques détectées</h2>
+    <img src="/static/attack_type.png" alt="Types d'attaques détectées" />
+
+    <h2>🧭 Top User-Agent détectés</h2>
+    <img
+      src="{{ url_for('static', filename='user_agents.png') }}"
+      alt="User Agents"
+      style="max-width: 100%; margin-bottom: 20px"
+    />
+
+    <h2>🔌 Ports les plus scannés</h2>
+    <img src="/static/port_scans.png" alt="Scans de ports" />
+  </body>
+</html>

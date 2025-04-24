@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Détails des attaques</title>
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 14px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+
+      /* Status styles */
+      .status-failed {
+        background-color: #f8d7da;
+        color: #721c24;
+        font-weight: bold;
+      }
+      .status-success {
+        background-color: #d4edda;
+        color: #155724;
+        font-weight: bold;
+      }
+      .status-access {
+        background-color: #d1ecf1;
+        color: #0c5460;
+        font-weight: bold;
+      }
+      .status-download {
+        background-color: #fff3cd;
+        color: #856404;
+        font-weight: bold;
+      }
+
+      /* Attack type styles */
+      .attack-sqli {
+        background-color: #f5e0ff;
+        color: #800080;
+        font-weight: bold;
+      }
+      .attack-brute {
+        background-color: #ffe4b5;
+        color: #b25900;
+        font-weight: bold;
+      }
+      .attack-brute-ssh {
+        background-color: #ffe0e0;
+        color: #990000;
+        font-weight: bold;
+      }
+      .attack-xss {
+        background-color: #e1f5fe;
+        color: #0277bd;
+        font-weight: bold;
+      }
+      .attack-ddos {
+        background-color: #3f51b5;
+        color: #ffffff;
+        font-weight: bold;
+      }
+      .attack-portscan {
+        background-color: #fff3cd;
+        color: #856404;
+        font-weight: bold;
+      }
+      .attack-access {
+        background-color: #e8f5e9;
+        color: #1b5e20;
+        font-weight: bold;
+      }
+      .attack-download {
+        background-color: #fff8e1;
+        color: #ff6f00;
+        font-weight: bold;
+      }
+      .attack-auth {
+        background-color: #ede7f6;
+        color: #4527a0;
+        font-weight: bold;
+      }
+      .attack-probe {
+        background-color: #e3f2fd;
+        color: #0d47a1;
+        font-weight: bold;
+      }
+      .attack-simple {
+        background-color: #f0f0f0;
+        color: #444;
+        font-weight: normal;
+      }
+    </style>
+
+    <script>
+      function filterTable() {
+        const input = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const rows = document.querySelectorAll("tbody tr");
+        rows.forEach((row) => {
+          const rowText = row.textContent.toLowerCase();
+          row.style.display = rowText.includes(input) ? "" : "none";
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <h1>📋 Détails complets des attaques</h1>
+
+    <input
+      type="text"
+      id="searchInput"
+      onkeyup="filterTable()"
+      placeholder="🔍 Rechercher par IP, pays, région, ville, endpoint, méthode, username, status, etc..."
+    />
+
+    <table>
+      <thead>
+        <tr>
+          <th>Session ID</th>
+          <th>Timestamp</th>
+          <th>IP</th>
+          <th>Pays</th>
+          <th>Région</th>
+          <th>Ville</th>
+          <th>ISP</th>
+          <th>ASN</th>
+          <th>Endpoint</th>
+          <th>Méthode</th>
+          <th>User-Agent</th>
+          <th>Username</th>
+          <th>Password</th>
+          <th>Status</th>
+          <th>Répétitions</th>
+          <th>Type d’attaque</th>
+          <th>Type de scan</th>
+          <th>Fichier téléchargé</th>
+          <th>Map</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for log in logs %}
+        <tr>
+          <td>{{ log.session_id }}</td>
+          <td>{{ log.timestamp }}</td>
+          <td>{{ log.ip }}</td>
+          <td>{{ log.country }}</td>
+          <td>{{ log.region }}</td>
+          <td>{{ log.city }}</td>
+          <td>{{ log.isp }}</td>
+          <td>{{ log.asn }}</td>
+          <td>{{ log.endpoint }}</td>
+          <td>{{ log.method }}</td>
+          <td>{{ log.user_agent }}</td>
+          <td>{{ log.username }}</td>
+          <td>{{ log.password }}</td>
+          <td
+            class="{% if log.status == 'FAILED' %}status-failed {% elif log.status == 'SUCCESS' %}status-success {% elif log.status == 'ACCESS' %}status-access {% elif log.status == 'DOWNLOAD' %}status-download {% endif %}"
+          >
+            {{ log.status }}
+          </td>
+          <td>{{ log.repeat }}</td>
+          <td
+            class="{% if log.attack_type == 'SQL_INJECTION' %}attack-sqli {% elif log.attack_type == 'BRUTE_FORCE_HTTP' %}attack-brute {% elif log.attack_type == 'BRUTE_FORCE_SSH' %}attack-brute-ssh {% elif log.attack_type == 'XSS_INJECTION' %}attack-xss {% elif log.attack_type == 'DDOS' %}attack-ddos {% elif log.attack_type == 'PORT_SCAN' %}attack-portscan {% elif log.attack_type == 'ACCESS' %}attack-access {% elif log.attack_type == 'DOWNLOAD' %}attack-download {% elif log.attack_type == 'AUTH_SUCCESS' %}attack-auth {% elif log.attack_type == 'PROBE_ATTEMPT' %}attack-probe {% elif log.attack_type == 'SIMPLE_VISIT' %}attack-simple {% endif %}"
+          >
+            {{ log.attack_type }}
+          </td>
+          <td>{{ log.scan_type if log.scan_type else "-" }}</td>
+          <td>{{ log.downloaded_file if log.downloaded_file else "-" }}</td>
+          <td>
+            {% if log.map_url %}
+            <a href="{{ log.map_url }}" target="_blank">🗺️</a>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </body>
+</html>
