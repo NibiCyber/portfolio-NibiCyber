@@ -3,7 +3,7 @@
 Bienvenue sur mon portfolio GitHub dans le cadre de ma formation d’Analyste SOC en cybersécurité.
 
 Ce dépôt contient :
-- 🧠 Mon portfolio PowerPoint : [Télécharger le fichier](./Marzouk_Anissa_Portfolio_1_01042025.pptx)
+- 🧠 Mon portfolio PowerPoint : [Télécharger le fichier](../Marzouk_Anissa_Portfolio_1_01042025.pptx)
 - 🔐 Mon projet personnel Honeypot avec ses scripts associés
 - 📁 Une présentation des 10 projets réalisés au cours de ma formation
 
