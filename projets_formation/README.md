@@ -29,6 +29,8 @@ Utilisation de **Elastic (ELK)** et **TheHive** pour détecter, prioriser et cla
 Compréhension du rôle central des logs et des alertes dans le cycle de détection.  
 ➡️ **Outils** : Elastic, TheHive
 
+📂 [Voir tous les fichiers du projet](../Analyser-logs-classer-alertes_Marzouk_Anissa)
+
 ---
 
 ## 🛡 Projet 4 – Scripts Python pour automatisation des réponses
@@ -39,6 +41,8 @@ Compréhension du rôle central des logs et des alertes dans le cycle de détect
 - Neutraliser automatiquement certaines menaces  
 ➡️ **Outils** : Python, Visual Studio Code, CMD
 
+📂 [Voir tous les fichiers du projet](../Redigez-vos-premiers-scripts-python_Marzouk_Anissa)
+
 ---
 
 ## 🛡 Projet 5 – Containment : Contenez vos premiers incidents
@@ -46,6 +50,8 @@ Compréhension du rôle central des logs et des alertes dans le cycle de détect
 Simulation d’un incident en temps réel avec plan d’endiguement.  
 Blocage d’IP, documentation des actions, justification métier.  
 ➡️ **Outils** : VirtualBox, TheHive, Python
+
+📂 [Voir tous les fichiers du projet](../Contenez-vos-premiers-incidents_Marzouk_Anissa)
 
 ---
 
@@ -55,6 +61,8 @@ Analyse d’un incident multi-phases via **logs, PCAP, documents malveillants**.
 Détection d’attaques Log4Shell, d’injections, de macro Word.  
 ➡️ **Outils** : Elastic, Wireshark, oletools, CyberChef, TheHive
 
+📂 [Voir tous les fichiers du projet](../Enquetez-premiers-incidents-cybersecurite_Marzouk_Anissa)
+
 ---
 
 ## 🛡 Projet 7 – Résolution complète d’un incident
@@ -62,6 +70,8 @@ Détection d’attaques Log4Shell, d’injections, de macro Word.
 Traitement de bout en bout d’une alerte critique (SMB Scan).  
 Qualification, remédiation, recommandations techniques et vulgarisées.  
 ➡️ **Outils** : TheHive, Elastic, Wazuh
+
+📂 [Voir tous les fichiers du projet](../Resolvez-incident-bout-en-bout_Marzouk_Anissa)
 
 ---
 
@@ -71,6 +81,8 @@ Amélioration des règles de détection pour réduire le bruit dans **Wazuh/Elas
 Documentation des ajustements, mesure d’impact.  
 ➡️ **Outils** : Wazuh, Elastic, Python
 
+📂 [Voir tous les fichiers du projet](../Limitez-les-faux-positifs_Marzouk_Anissa)
+
 ---
 
 ## 🛡 Projet 9 – Gestion de crise : Appuieriez-vous sur le bouton rouge ?
@@ -79,6 +91,7 @@ Simulation de crise à grande échelle.
 Production de 3 livrables essentiels : remédiation, règle Snort, chronologie de l’attaque.  
 ➡️ **Outils** : CyberChef, TheHive, Wireshark, VirtualBox  
 
+📂 [Voir tous les fichiers du projet](../Bouton-Rouge_Marzouk_Anissa)
 
 ---
 
@@ -87,3 +100,7 @@ Production de 3 livrables essentiels : remédiation, règle Snort, chronologie d
 Construction d’une chaîne d’automatisation SOC avec **TheHive, Cortex, N8N, Splunk**.  
 Création d’analyzers, automatisation du traitement d’alertes, dashboard final.  
 ➡️ **Outils** : TheHive, N8N, Cortex, Splunk
+
+📂 [Voir tous les fichiers du projet](AutomatisezTraitementAlertes_Marzouk_Anissa)
+
+
