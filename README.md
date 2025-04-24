@@ -4,6 +4,7 @@ Bienvenue sur mon portfolio GitHub dans le cadre de ma formation d’Analyste SO
 
 Ce dépôt contient :
 - 🧠 Mon portfolio PowerPoint : 📥 [Cliquez ici pour télécharger le portfolio complet en PowerPoint](Marzouk_Anissa_Portfolio_1_01042025.pptx)
+⚠️ Ce fichier est volumineux, GitHub ne peut pas l'afficher, mais le téléchargement fonctionne bien.
 - 🔐 Mon projet personnel Honeypot avec ses scripts associés
 - 📁 Une présentation des 10 projets réalisés au cours de ma formation
 
