@@ -29,28 +29,28 @@ Tous les événements sont enregistrés dans une base de données, puis visualis
 ### 🧠 Résumé d’activité généré dynamiquement  
 Cette section présente une synthèse automatique des attaques enregistrées : volume global, types d’attaques, pays d’origine, endpoints ciblés, IPs les plus actives, et ports scannés. En bas, un graphique en camembert met en évidence les pays les plus impliqués.
 
-![Synthèse IA / camembert pays](./visualisation_synthese-IA_camembert-pays.PNG)
+![Synthèse IA + camembert pays](./visualisation_synthese-IA_camembert-pays.PNG)
 
 ---
 
 ### 🗂 Pages visitées et ASN les plus fréquents  
 Le premier graphique affiche les endpoints les plus ciblés par les attaquants (notamment `/admin`). La répartition GET/POST permet d’identifier les tentatives de connexion ou de scan. Le second graphique montre les ASN (fournisseurs de connectivité) les plus représentés parmi les IP détectées.
 
-![Pages visitées / asn](./visualisation_pages-visitees_asn-frequents.PNG)
+![Pages visitées + asn](./visualisation_pages-visitees_asn-frequents.PNG)
 
 ---
 
 ### 🔁 Top IPs les plus insistantes et attaques détectées  
 Ce graphique met en évidence les adresses IP ayant généré le plus de requêtes vers le honeypot, illustrant des comportements suspects. En dessous, les types d'attaques détectés sont classés par fréquence, allant du brute force SSH aux scans de port, en passant par les attaques DDoS et les injections SQL/XSS.
 
-![Top IPs / attaques detectées](./visualisation_ip-insistantes_type-attaques.PNG)
+![Top IPs + attaques detectées](./visualisation_ip-insistantes_type-attaques.PNG)
 
 ---
 
 ### 📡 User-Agent et ports les plus ciblés  
 Les premiers graphiques révèlent les outils ou navigateurs utilisés par les attaquants, souvent des scripts automatisés. Le second graphique présente les ports les plus souvent scannés, illustrant les tentatives de reconnaissance réseau sur des services comme HTTP, HTTPS, FTP ou RDP.
 
-![User Agent / Ports](./visualisation_users-agents_ports-scannes.PNG)
+![User Agent + Ports](./visualisation_users-agents_ports-scannes.PNG)
 
 ---
 
