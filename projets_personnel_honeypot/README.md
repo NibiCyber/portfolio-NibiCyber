@@ -29,28 +29,28 @@ Tous les événements sont enregistrés dans une base de données, puis visualis
 ### 🧠 Résumé d’activité généré dynamiquement  
 Cette section présente une synthèse automatique des attaques enregistrées : volume global, types d’attaques, pays d’origine, endpoints ciblés, IPs les plus actives, et ports scannés. En bas, un graphique en camembert met en évidence les pays les plus impliqués.
 
-📸 *(capture ici)*
+![Synthèse IA / camembert pays](./visualisation_synthese-IA_camembert-pays.PNG)
 
 ---
 
 ### 🗂 Pages visitées et ASN les plus fréquents  
 Le premier graphique affiche les endpoints les plus ciblés par les attaquants (notamment `/admin`). La répartition GET/POST permet d’identifier les tentatives de connexion ou de scan. Le second graphique montre les ASN (fournisseurs de connectivité) les plus représentés parmi les IP détectées.
 
-📸 *(capture ici)*
+![Pages visitées / asn](./visualisation_pages-visitees_asn-frequents.PNG)
 
 ---
 
 ### 🔁 Top IPs les plus insistantes et attaques détectées  
 Ce graphique met en évidence les adresses IP ayant généré le plus de requêtes vers le honeypot, illustrant des comportements suspects. En dessous, les types d'attaques détectés sont classés par fréquence, allant du brute force SSH aux scans de port, en passant par les attaques DDoS et les injections SQL/XSS.
 
-📸 *(capture ici)*
+![Top IPs / attaques detectées](./visualisation_ip-insistantes_type-attaques.PNG)
 
 ---
 
 ### 📡 User-Agent et ports les plus ciblés  
 Les premiers graphiques révèlent les outils ou navigateurs utilisés par les attaquants, souvent des scripts automatisés. Le second graphique présente les ports les plus souvent scannés, illustrant les tentatives de reconnaissance réseau sur des services comme HTTP, HTTPS, FTP ou RDP.
 
-📸 *(capture ici)*
+![User Agent / Ports](./visualisation_users-agents_ports-scannes.PNG)
 
 ---
 
@@ -59,28 +59,28 @@ Les premiers graphiques révèlent les outils ou navigateurs utilisés par les a
 ### 🛠 Scans de ports identifiés par le honeypot  
 Scans de ports identifiés par le honeypot avec type de service ciblé.
 
-📸 *(capture ici)*
+![Scan ports](./details-scan.PNG)
 
 ---
 
 ### 🧨 Logs d’attaques DDoS, brute force HTTP et SSH  
 Logs retraçant des attaques DDoS, brute force HTTP et SSH.
 
-📸 *(capture ici)*
+![DDoS & Brute](./details-brute-ddos.PNG)
 
 ---
 
 ### 📥 Tentatives de téléchargement de fichiers sensibles  
 Tentatives de téléchargement de fichiers sensibles via endpoints piégés.
 
-📸 *(capture ici)*
+![Downloads](./details-download.PNG)
 
 ---
 
 ### 💉 Injections SQL et XSS détectées automatiquement  
 Logs d’attaques par injection SQL et XSS détectées automatiquement.
 
-📸 *(capture ici)*
+![Injections](./details-injection.PNG)
 
 
 ## 🕵️ Interface de simulation (honeypot web)
@@ -89,7 +89,7 @@ Logs d’attaques par injection SQL et XSS détectées automatiquement.
 Permet de récupérer les identifiants saisis par l’attaquant.  
 Conçue pour simuler un accès restreint crédible aux yeux d’un intrus.
 
-📸 *(capture ici)*
+![Connexion admin](./simulation_web-admin.PNG)
 
 ---
 
@@ -97,7 +97,7 @@ Conçue pour simuler un accès restreint crédible aux yeux d’un intrus.
 Chaque module redirige vers une autre interface piégée.  
 L’illusion d’un vrai panneau admin renforce l’engagement de l’attaquant.
 
-📸 *(capture ici)*
+![Dashboard](./simulation_web-dashboard.PNG)
 
 ---
 
@@ -105,15 +105,15 @@ L’illusion d’un vrai panneau admin renforce l’engagement de l’attaquant.
 Les fichiers affichés (SQL, CSV, JSON) semblent téléchargeables.  
 Chaque clic sur "Télécharger" est capturé pour analyse.
 
-📸 *(capture ici)*
+![Sauvegardes BDD](./simulation_web-bdd.PNG)
 
 ---
 
 ### 📄 Faux journal système listant des événements crédibles  
 Les actions sont inventées mais crédibles (téléchargements, échecs SSH…).  
-Chaque affichage simule une vraie infrastructure active.
+Chaque affichage simule une vraie infrastructure active. Les logs sont téléchargeables.
 
-📸 *(capture ici)*
+![Logs système](./simulation_web-logs.PNG)
 
 ---
 
@@ -121,7 +121,7 @@ Chaque affichage simule une vraie infrastructure active.
 Les intitulés sont volontairement provocateurs (`root_access`, `ceo_panel`…).  
 Objectif : inciter à l’exploration ou au vol d’identité.
 
-📸 *(capture ici)*
+![Utilisateurs](./simulation_web-users.PNG)
 
 ---
 
@@ -129,4 +129,4 @@ Objectif : inciter à l’exploration ou au vol d’identité.
 Elle contient des données fictives censées sembler confidentielles.  
 Utilisée pour piéger les attaquants à la recherche d’APIs ou d’identifiants.
 
-📸 *(capture ici)*
+![Configuration](./simulation_web-config.PNG)
