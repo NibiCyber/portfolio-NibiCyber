@@ -19,6 +19,8 @@ Découverte du fonctionnement d’un SOC, des rôles et missions.
 Création de supports de sensibilisation (PDF, affiches) et modélisation de chemins d’attaque.  
 ➡️ **Compétences** : vulgarisation, esprit de synthèse, communication.
 
+📂 [Voir tous les fichiers du projet](Ecosysteme_detection_Marzouk_Anissa)
+
 ---
 
 ## 🛡 Projet 3 – Analyse de logs & classification des alertes
