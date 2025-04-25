@@ -19,8 +19,6 @@ Découverte du fonctionnement d’un SOC, des rôles et missions.
 Création de supports de sensibilisation (PDF, affiches) et modélisation de chemins d’attaque.  
 ➡️ **Compétences** : vulgarisation, esprit de synthèse, communication.
 
-📂 [Voir tous les fichiers du projet](parcours/Ecosysteme_detection_Marzouk_Anissa)
-
 ---
 
 ## 🛡 Projet 3 – Analyse de logs & classification des alertes
@@ -28,8 +26,6 @@ Création de supports de sensibilisation (PDF, affiches) et modélisation de che
 Utilisation de **Elastic (ELK)** et **TheHive** pour détecter, prioriser et classifier les alertes.  
 Compréhension du rôle central des logs et des alertes dans le cycle de détection.  
 ➡️ **Outils** : Elastic, TheHive
-
-📂 [Voir tous les fichiers du projet](parcours/Analyser-logs-classer-alertes_Marzouk_Anissa)
 
 ---
 
@@ -41,8 +37,6 @@ Compréhension du rôle central des logs et des alertes dans le cycle de détect
 - Neutraliser automatiquement certaines menaces  
 ➡️ **Outils** : Python, Visual Studio Code, CMD
 
-📂 [Voir tous les fichiers du projet](parcours/Redigez-vos-premiers-scripts-python_Marzouk_Anissa)
-
 ---
 
 ## 🛡 Projet 5 – Containment : Contenez vos premiers incidents
@@ -50,8 +44,6 @@ Compréhension du rôle central des logs et des alertes dans le cycle de détect
 Simulation d’un incident en temps réel avec plan d’endiguement.  
 Blocage d’IP, documentation des actions, justification métier.  
 ➡️ **Outils** : VirtualBox, TheHive, Python
-
-📂 [Voir tous les fichiers du projet](parcours/Contenez-vos-premiers-incidents_Marzouk_Anissa)
 
 ---
 
@@ -61,8 +53,6 @@ Analyse d’un incident multi-phases via **logs, PCAP, documents malveillants**.
 Détection d’attaques Log4Shell, d’injections, de macro Word.  
 ➡️ **Outils** : Elastic, Wireshark, oletools, CyberChef, TheHive
 
-📂 [Voir tous les fichiers du projet](parcours/Enquetez-premiers-incidents-cybersecurite_Marzouk_Anissa)
-
 ---
 
 ## 🛡 Projet 7 – Résolution complète d’un incident
@@ -70,8 +60,6 @@ Détection d’attaques Log4Shell, d’injections, de macro Word.
 Traitement de bout en bout d’une alerte critique (SMB Scan).  
 Qualification, remédiation, recommandations techniques et vulgarisées.  
 ➡️ **Outils** : TheHive, Elastic, Wazuh
-
-📂 [Voir tous les fichiers du projet](parcours/Resolvez-incident-bout-en-bout_Marzouk_Anissa)
 
 ---
 
@@ -81,8 +69,6 @@ Amélioration des règles de détection pour réduire le bruit dans **Wazuh/Elas
 Documentation des ajustements, mesure d’impact.  
 ➡️ **Outils** : Wazuh, Elastic, Python
 
-📂 [Voir tous les fichiers du projet](parcours/Limitez-les-faux-positifs_Marzouk_Anissa)
-
 ---
 
 ## 🛡 Projet 9 – Gestion de crise : Appuieriez-vous sur le bouton rouge ?
@@ -90,8 +76,6 @@ Documentation des ajustements, mesure d’impact.
 Simulation de crise à grande échelle.  
 Production de 3 livrables essentiels : remédiation, règle Snort, chronologie de l’attaque.  
 ➡️ **Outils** : CyberChef, TheHive, Wireshark, VirtualBox  
-
-📂 [Voir tous les fichiers du projet](parcours/Bouton-Rouge_Marzouk_Anissa)
 
 ---
 
@@ -101,6 +85,5 @@ Construction d’une chaîne d’automatisation SOC avec **TheHive, Cortex, N8N,
 Création d’analyzers, automatisation du traitement d’alertes, dashboard final.  
 ➡️ **Outils** : TheHive, N8N, Cortex, Splunk
 
-📂 [Voir tous les fichiers du projet](parcours/AutomatisezTraitementAlertes_Marzouk_Anissa)
 
 
